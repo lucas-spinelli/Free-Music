@@ -37,17 +37,9 @@ function reproducirCancionAnterior() {
   reproducirCancionActual();
 }
 
-function reproducirCancionAleatoria() {
-  shuffleArray(canciones);
-  cancionActualIndex = 0;
+function reproducirCancionSiguiente() {
+  cancionActualIndex = (cancionActualIndex + 1) % canciones.length;
   reproducirCancionActual();
-}
-
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
 }
 
 function ajustarProgreso(event) {
