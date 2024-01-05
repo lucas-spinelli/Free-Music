@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Music Player</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Reproductor de MÃºsica</title>
 </head>
 <body>
-    <div class="music-player">
-        <div class="progress-bar"></div>
-        <div class="controls">
-            <button id="previousButton" onclick="playPrevious()">&#9194;</button>
-            <button id="playButton" onclick="togglePlayPause()">&#9654;</button>
-            <button id="nextButton" onclick="playNext()">&#9193;</button>
-        </div>
-        <audio id="audioPlayer" controls>
-            <source src="tu_cancion.mp3" type="audio/mp3">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
+  <div id="reproductor">
+    <div id="controles">
+      <button id="anterior" class="boton" onclick="reproducirCancionAnterior()">&lt;</button>
+      <button id="play-pausa" class="boton" onclick="togglePlayPause()">&#9654;</button>
+      <button id="siguiente" class="boton" onclick="reproducirCancionAleatoria()">&gt;</button>
     </div>
-    <script src="script.js"></script>
+    <div id="barra-progreso">
+      <div id="progreso" onclick="ajustarProgreso(event)"></div>
+    </div>
+    <div id="informacion">
+      <p id="nombre-cancion">Nombre de la canciÃ³n</p>
+      <p id="artista">Artista</p>
+    </div>
+    <audio id="reproductor-audio" src="" ontimeupdate="actualizarBarraProgreso()" onended="reproducirCancionAleatoria()"></audio>
+  </div>
+  <script src="reproductor.js"></script>
 </body>
-</html>
+    </html>
