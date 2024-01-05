@@ -11,7 +11,7 @@
     <div id="controles">
       <button id="anterior" class="boton" onclick="reproducirCancionAnterior()">&lt;</button>
       <button id="play-pausa" class="boton" onclick="togglePlayPause()">&#9654;</button>
-      <button id="siguiente" class="boton" onclick="reproducirCancionAleatoria()">&gt;</button>
+      <button id="siguiente" class="boton" onclick="reproducirCancionSiguiente()">&gt;</button>
     </div>
     <div id="barra-progreso">
       <div id="progreso" onclick="ajustarProgreso(event)"></div>
@@ -20,8 +20,8 @@
       <p id="nombre-cancion">Nombre de la canciÃ³n</p>
       <p id="artista">Artista</p>
     </div>
-    <audio id="reproductor-audio" ontimeupdate="actualizarBarraProgreso()" onended="reproducirCancionAleatoria()"></audio>
+    <audio id="reproductor-audio" ontimeupdate="actualizarBarraProgreso()" onended="reproducirCancionSiguiente()"></audio>
   </div>
   <script src="reproductor.js"></script>
 </body>
-                                                            </html>
+</html>
