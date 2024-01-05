@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.music-player {
+    width: 300px;
+    text-align: center;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #ccc;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
