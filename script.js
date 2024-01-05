@@ -5,7 +5,7 @@ let isPlaying = false;
 
 // AÃ±adir mÃ¡s canciones segÃºn sea necesario
 let canciones = [
-  { nombre: 'CanciÃ³n 1', artista: 'Artista 1', archivo: 'cancion1.mp3' },
+  { nombre: 'Mi suerte', artista: 'Morat', archivo: 'Mi Suerte - Morat (320).mp3' },
   { nombre: 'CanciÃ³n 2', artista: 'Artista 2', archivo: 'cancion2.mp3' },
   // Agregar mÃ¡s canciones
 ];
